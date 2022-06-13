@@ -1,0 +1,353 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+}
+
+.mainTopBar {
+    width: 100%;
+    height: 10vh;
+    background: aliceblue;
+    
+}
+
+.location, .searchBar {
+            width: 18%;
+            height: 70%;
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 1% 1%;
+            font-family: lato;
+            border-radius: 10px;
+            background-color: white;
+            border: 1px solid black;
+}
+
+ .searchBar {
+    width: 50%;
+    border: 1px solid black;
+    text-transform: none;
+}
+
+.sellButton {
+        width: 10%;
+        height: 70%;
+        background-color: rgb(255, 145, 0);
+        
+        border-radius: 10px;
+        font-size: 1.2rem;
+ 
+        border: 0;
+        cursor: pointer;
+        
+}
+.sellButton:hover {
+    width: 10%;
+    height: 71%;
+    
+}
+.profileName {
+        display:inline-block;
+        
+        border-radius: 20px;
+        margin-left: 10px;
+        width: 200px;
+        padding: 0;
+}
+.profileActions {
+        width: 70px;
+        height: 30px;
+        background-color: rgb(116, 197, 116);
+        border: none;
+        border-radius: 5px;
+        margin-left: 20px;
+        cursor: pointer;
+        
+}
+
+.profileActions:hover { 
+    width: 72px;
+    height: 32px;
+    
+
+}
+
+.profileActions option {
+    padding: 20px;
+}
+
+
+.mainTopBar h3 {
+display: inline-block;
+margin: 0 0 0 2%;
+}
+
+
+
+.categoriesContainerUl  {
+    display: flex;
+    margin: 0;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    list-style: none;
+    border: 0px solid black;
+    background-color: rgb(227, 242, 255);
+    font-weight: 500;
+    align-items: center;
+    
+}
+
+.categoriesLink {
+    text-decoration: none;
+    color: black;
+
+}
+
+.categoriesLink:hover {
+
+    font-size: 20px;
+}
+
+.mainContainer {
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    
+
+}
+
+.topAdsTitle {
+    color: black;
+    margin: 30px 0px 0px 50px
+}
+
+
+.topAdsContainer {
+    display:flex;    
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around   ;
+    width: 100%;
+    height: 80vh;
+    padding-top: 10px;
+    overflow: auto;
+    
+    
+
+}
+
+.topAdCard {
+    width: 25%;
+    height: 70%;    
+    box-shadow: rgb(10, 10 ,10);
+    border: 2px solid rgb(70, 65, 65);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;        
+    overflow: auto;
+    margin: 0 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.topAdCard h4 {
+    margin: 2%;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 400;
+}
+
+.topAdCard h3 {
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 600;
+    margin: 2% 0 0 2%;
+}
+
+
+.topAdCard h5 {
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 600;
+    
+    margin: 20% 0 0 2%;
+}
+.topAdCard img {
+    padding: 10px;
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient(rgba(4, 9, 30, 1.7), rgba(4,9,30,0.7));
+}
+
+.topAdCardImage { 
+    padding: 5px;
+    width: 100%;
+    height: 80%;
+}
+
+.sellerContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    
+}
+
+.sellerContainer h3{
+    font-family: lato;
+    color:black;
+    font-size: 2.5rem;
+    margin: 0;
+    
+}
+
+.sellerContainer p {
+    font-size: 1.5rem;
+}
+
+
+.sellerContainer button {
+    background-color: orange;
+    width: 150px;
+    height: 40px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+
+.queryBoxContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+
+}   
+
+.queryBox {
+        width: 200px;
+        height: 200px;
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1%;
+}
+.queryBox img {
+        width: 110px;
+        height: 100px;
+}
+
+.sliderContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;    
+        justify-content: center;
+        margin: 1% 0;
+        background-image: linear-gradient(rgba(4, 9, 30, 1.7), rgba(4,9,30,0.7));
+}
+
+.sliderImage {
+    width: 1000px;
+    height: 300px;
+    opacity: 0.5;
+    
+}
+
+@media(max-width: 700px) {
+   
+    .mainTopBar {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 30vh;
+        background: aliceblue;
+        margin: 0;
+    }
+    .location {
+            width: 100%;
+            height: 50%;
+            margin: 5%;
+
+    }
+
+    .location option {
+        font-size: 1rem;
+        width: 0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .searchBar {
+        width: 100%;
+        height: 60%;
+        margin: 12px 0;
+    }
+    .sellButton {
+            width: 100%;
+            height: 50%;
+            margin: 12px 0;
+    }
+
+    .categoriesContainerUl  {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        justify-content: space-evenly;
+        padding: 10px 0;
+        
+        align-items: center;
+        
+    }    .mainContainer { 
+        width: 100%;
+        margin: 0;
+        
+    }
+
+        .topAdsContainer {
+            flex-flow: column-reverse;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+            
+            
+        }
+
+        .topAdCard {
+                width: 80%;
+                height: 78%;
+                
+                
+        }
+
+        .topAdCard img {
+            width: 100%;
+            height: 80%;
+            
+            
+            
+    }
+    .sellerContainer {
+                margin-top: 5%;        
+
+    }
+
+    .sellerContainer h3{
+        font-size: 1.5rem;
+        text-align: center;
+        
+        
+
+    }
+    .sellerContainer button { 
+            
+
+    }
+
+
+}

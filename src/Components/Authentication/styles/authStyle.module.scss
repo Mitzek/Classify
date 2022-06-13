@@ -1,0 +1,84 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+@import "../../styles/components";
+
+ .regContainer {
+        width: 100%;
+        height: 88.6vh;
+        @include flexCenter(row);
+
+ }
+
+ .regForm {
+        width: 35%;
+        height: 80%;
+        background-color: $authContainerbg; 
+        border-radius: 10px;
+        gap: 1rem;
+        @include flexCenter(column);
+        
+ }
+
+ .regLogo { 
+        text-align: center;
+        font-size: 1.2rem;        
+        font-family: lato;
+        h1 { 
+            color: $logo;        
+        }
+        
+ }
+
+
+
+ .regInput {
+            width: 60%;
+            height: 10%;
+            background-color: $inputBGColor;
+            border-radius: 5px;
+            border: 0;
+            text-align: center;
+            color:black;
+            font-weight: 500;
+            font-size: 15px;
+            
+ }
+ .regSubmit {
+    @extend .rlsButton;
+ }
+
+
+ @media(max-width: 600px) {
+        .regContainer {
+          width: 100%;
+          height: 100vh;
+        }
+        .regForm {
+            width: 70%;
+            gap: 2rem;
+        }   
+
+        .regLogo {
+            font-size: 1rem;
+        }
+        
+        .regLogo h3 {
+            font-size: 0.9rem;
+        }
+        .regInput {
+
+            width: 80%;
+            
+            
+        }
+
+        .regSubmit {
+            width: 60%;
+            font-size: 20px;
+        }
+
+ }
+
+  
+
+  

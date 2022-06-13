@@ -1,0 +1,21 @@
+@mixin flexGeneral ($direction, $wrap, $justify, $align,  ) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap
+}
+
+@mixin flexCenter ($direction ) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin flexJustify ($direction, $justify ) {
+    display: flex;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+

@@ -1,0 +1,161 @@
+.rlsButton {
+  width: 45%;
+  height: 10%;
+  border-radius: 5px;
+  border: 0;
+  text-align: center;
+  background-color: #ff9100;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.topBarInputs {
+  width: 18%;
+  height: 70%;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 1% 1%;
+  font-family: lato;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+nav {
+  width: 100%;
+  padding: 0% 6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.header {
+  background-color: #163149;
+  width: 100%;
+  height: 10vh;
+}
+
+.header nav ul li {
+  display: inline-block;
+  text-align: center;
+  list-style: none;
+  padding: 0 10px;
+  font-size: 18px;
+  position: relative;
+  color: white;
+  font-family: Montserrat;
+}
+
+.header h2 {
+  color: #ff7842;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.footerLogo {
+  color: #ff7842;
+}
+
+.footer {
+  width: 100%;
+  height: 20vh;
+  background-color: #163149;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10%;
+}
+
+.footer ul li {
+  list-style: none;
+  color: white;
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+
+.footer p {
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .header nav ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    list-style: none;
+    padding: 0 10px;
+    font-size: 18px;
+    position: relative;
+    color: white;
+    font-family: Montserrat;
+  }
+  .header h2 {
+    color: #ff7842;
+    font-size: 3rem;
+    margin: 0;
+  }
+  .navIconClose {
+    position: relative;
+    display: none;
+    font-family: arial;
+    text-decoration: none;
+    font-style: none;
+    border: 1px solid white;
+    font-size: 20px;
+    width: 30px;
+    margin: 5px 0px 0px 10px;
+    text-align: center;
+    color: white;
+  }
+  .navIconOpen {
+    position: absolute;
+    right: 5%;
+    bottom: 126%;
+    display: none;
+    font-family: arial;
+    text-decoration: none;
+    font-style: none;
+    border: 1px solid white;
+    font-size: 20px;
+    width: 30px;
+    margin: 5px 0px 0px 10px;
+    text-align: center;
+    color: white;
+  }
+  .navLink {
+    position: absolute;
+    background: #225c64;
+    height: 18vh;
+    width: 100%;
+    top: 10%;
+    right: 0%;
+    text-align: center;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .header nav ul li {
+    display: block;
+    padding: 5px 0;
+  }
+  .navLinksClose {
+    display: none;
+  }
+}
+/*# sourceMappingURL=layoutStyles.module.css.map */
