@@ -4,8 +4,6 @@ import styles from "./styles/authStyle.module.css";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { loginRoute } from "../../API/apiRoutes.js";
-import { authRoute } from "./../../API/apiRoutes";
-import App from "./../../App";
 
 function Login() {
   const [user, setUser] = useState({
