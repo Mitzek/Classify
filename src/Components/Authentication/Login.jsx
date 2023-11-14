@@ -81,10 +81,10 @@ function Login() {
             <Link
               style={{
                 textDecoration: "none",
-                border: "1px solid black",
-                padding: "5px",
                 width: "20%",
+                padding: "5px",
                 borderRadius: "5px",
+                border: "1px solid black",
               }}
               to="/register"
             >

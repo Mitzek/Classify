@@ -17,6 +17,7 @@ function Footer() {
             <li>Contact Us</li>
           </Link>
         </ul>
+
         <ul>
           <li>All rights reserved - 2023</li>
           <li>Portfolio project by Rehan Ali.</li>
