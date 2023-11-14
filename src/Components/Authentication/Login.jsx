@@ -76,7 +76,7 @@ function Login() {
           </button>
           <span style={{ fontSize: "12px", color: "green" }}>
             For your convenience, the login inputs are already added, just hit
-            login.{" "}
+            login.
           </span>
           <p>
             Dont have an account?{" "}
