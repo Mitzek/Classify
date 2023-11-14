@@ -1,17 +1,8 @@
-.rlsButton, .regSubmit {
-  width: 45%;
-  height: 10%;
-  border-radius: 5px;
-  border: 0;
-  text-align: center;
-  background-color: #ff9100;
-  font-weight: 600;
-  cursor: pointer;
-}
+
 
 .topBarInputs {
   width: 18%;
-  height: 70%;
+  height: 50%;
   text-align: center;
   font-size: 1.2rem;
   margin: 1% 1%;
@@ -21,43 +12,33 @@
   border: 1px solid black;
 }
 
+.loginContainer {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
 .regContainer {
   width: 100%;
-  height: 88.6vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  height: 100vh;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .regForm {
   width: 35%;
-  height: 80%;
-  background-color: #51a6d8;
+  height: 70%;
   border-radius: 10px;
   gap: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .regLogo {
@@ -65,44 +46,61 @@
   font-size: 1.2rem;
   font-family: lato;
 }
-
 .regLogo h1 {
-  color: #ff7842;
+  color: rgb(255, 87, 21);
 }
 
 .regInput {
-  width: 60%;
-  height: 10%;
-  background-color: #9ecde9;
+  width: 70%;
+  height: 20%;
+  background-color: rgb(243, 244, 245);
   border-radius: 5px;
-  border: 0;
+  border: 2px solid gray;
   text-align: center;
   color: black;
   font-weight: 500;
   font-size: 15px;
 }
 
+.rlsButton,
+.regSubmit {
+  width: 70%;
+  height: 20%;
+  border-radius: 5px;
+  border: 0;
+  text-align: center;
+  background-color: rgb(255, 145, 0);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
 @media (max-width: 600px) {
   .regContainer {
     width: 100%;
     height: 100vh;
   }
+
   .regForm {
     width: 70%;
     gap: 2rem;
   }
+
   .regLogo {
     font-size: 1rem;
   }
+
   .regLogo h3 {
     font-size: 0.9rem;
   }
+
   .regInput {
     width: 80%;
   }
+
   .regSubmit {
     width: 60%;
     font-size: 20px;
   }
-}
-/*# sourceMappingURL=authStyle.module.css.map */
+}/*# sourceMappingURL=authStyle.module.css.map */

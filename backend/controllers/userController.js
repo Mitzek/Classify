@@ -67,7 +67,7 @@ module.exports.login = async (req, res, next) => {
 
                     const id = userCheck._id;
                     const token = jwt.sign({id}, "jwtSecret", {
-                        expiresIn: 500  
+                        expiresIn: 2000  
                     })
 
                     delete userCheck.password

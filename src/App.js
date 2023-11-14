@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import "./App.css";
 import NavBar from "./Components/Layout/NavBar";
 import About from "./Components/Navigation/About";
@@ -25,7 +25,11 @@ import { authRoute } from './API/apiRoutes';
 function App() {
   const [auth, setAuth] = useState();
   const [loading, setLoading] = useState(false)   
- 
+  const [currentUser, setCurrentUser] = useState(undefined);
+
+  // useLayoutEffect(() => {
+  //     localStorage.setItem("classify-user", undefined)    
+  // }, [])
   
   useEffect(() => {
      const getToken = async () => {
@@ -49,25 +53,43 @@ function App() {
 
   }, [auth]); 
 
+      useEffect(() => {
+      const setUser = async () => {
+        if(localStorage.getItem("classify-user")===undefined) {
+          console.log("see this");
+        }
+        else if(localStorage.getItem("classify-user"===null)){
+          console.log("from else if");
+        }
+        else {
+          setCurrentUser(await JSON.parse(localStorage.getItem("classify-user")));
+          console.log("dont see this");
+          
+        }
+      
+      }
+      
+      setUser();
+      
+    }, [])
+
 console.log(auth);
+console.log(currentUser);
   return (
     <>
       <Router>
-        {auth && (
-          <>
-             <NavBar />
-             <Categories/>         
-             <TopBar/>  
-          </>
-        )}
+      <NavBar />
+      
+             <TopBar currentUser={currentUser}/>  
+            <Categories/>     
 
         <Routes>
+          
           {auth && (
             <>
-              <Route path="/home" element={<Main />} />
+            
               <Route path="/sell" element={<CreateAd />} />
               <Route path="/displayAd" element={<DisplayAd />} />
-              <Route path="/contact" element={<Contact />} />
               <Route path="/myProfile" element={<MyProfile />} />
               <Route path="/myAds" element={<MyAds />} />
             </>
@@ -75,41 +97,29 @@ console.log(auth);
 
           {!auth && (
             <>
-              <Route path="/" element={<Login />} />
+              <Route path="/" element={<Main />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/about" element={<About />} />
             </>
           )}
 
           <Route
             path="*"
-            element={<Navigate to={auth ? "/home" : "/login"}/>}
+            element={<Navigate to={auth ? "/home  " : "/login"}/>}
           />
+
+          <Route path="/home" element={<Main />} />  
         </Routes>
-        {auth && (
           <>
             <Footer />
           </>
-        )}
-      </Router>
-
-{/* <>  <Router>
-             <NavBar />
-             <Categories/>         
-             <TopBar/> 
-             <Routes>
-             <Route path="/" element={<Main />} />
-              <Route path="/sell" element={<CreateAd />} />
-              <Route path="/displayAd" element={<DisplayAd />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/myProfile" element={<MyProfile />} />
-              <Route path="/myAds" element={<MyAds />} />
-              </Routes> 
-              <Footer />
-              
+          
               </Router>
-          </> */}
+
+
     </>
   );
 }

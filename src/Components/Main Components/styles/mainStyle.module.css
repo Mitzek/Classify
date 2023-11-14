@@ -1,17 +1,17 @@
-.rlsButton, .sellButton, .sellerContainer button {
-  width: 45%;
-  height: 10%;
+.rlsButton, .sellerContainer button, .sellButton {
+  width: 40%;
+  height: 8%;
   border-radius: 5px;
   border: 0;
   text-align: center;
-  background-color: #ff9100;
+  background-color: rgb(255, 145, 0);
   font-weight: 600;
   cursor: pointer;
 }
 
-.topBarInputs, .location, .searchBar {
+.topBarInputs, .searchBar, .location {
   width: 18%;
-  height: 70%;
+  height: 50%;
   text-align: center;
   font-size: 1.2rem;
   margin: 1% 1%;
@@ -22,8 +22,7 @@
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -37,10 +36,10 @@ body {
   height: 10vh;
   background: aliceblue;
 }
-
 .mainTopBar h3 {
   display: inline-block;
   margin: 0 0 0 2%;
+  color: rgb(94, 107, 146);
 }
 
 .location {
@@ -53,11 +52,10 @@ body {
 
 .sellButton {
   width: 10%;
-  height: 70%;
+  height: 50%;
   font-size: 1.2rem;
   font-weight: 100;
 }
-
 .sellButton:hover {
   font-size: 1.3rem;
 }
@@ -71,40 +69,33 @@ body {
 }
 
 .profileActions {
-  width: 70px;
-  height: 30px;
-  background-color: #74c574;
-  border: none;
+  width: 80%;
+  height: 31px;
+  text-align: center;
   border-radius: 5px;
-  margin-left: 20px;
+  margin-left: 50px;
   cursor: pointer;
+  font-size: 1.2rem;
+  border: 0;
+  color: white;
+  background-color: rgba(0, 136, 247, 0.966);
 }
-
 .profileActions:hover {
-  width: 72px;
-  height: 32px;
+  font-size: 1.1rem;
 }
-
 .profileActions option {
   padding: 20px;
 }
 
 .categoriesContainerUl {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  justify-content: space-evenly;
+  flex-direction: row;
   margin: 0;
   padding: 10px 0;
   list-style: none;
   border: 0px solid black;
-  background-color: #e3f2ff;
+  background-color: rgb(227, 242, 255);
   font-weight: 500;
 }
 
@@ -113,7 +104,6 @@ body {
   color: black;
   cursor: pointer;
 }
-
 .categoriesLink:hover {
   font-size: 20px;
 }
@@ -126,75 +116,53 @@ body {
 
 .topAdsTitle {
   color: black;
-  margin: 0px 20px;
+  margin: 10px 20px;
 }
 
 .topAdsContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
   height: 80vh;
-  padding-top: 10px;
+  padding-top: 0;
   overflow: auto;
 }
+
 
 .topAdCard {
   width: 25%;
   height: 70%;
-  -webkit-box-shadow: #0a0a0a;
-          box-shadow: #0a0a0a;
-  border: 2px solid #464141;
-  -webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-          box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  box-shadow: rgb(10, 10, 10);
+  border: 2px solid rgb(70, 65, 65);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   overflow: auto;
   margin: 0 3px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: space-between;
+  flex-direction: column;
 }
-
 .topAdCard h4 {
   margin: 2%;
-  font-family: 'Roboto Flex', sans-serif;
+  font-family: "Roboto Flex", sans-serif;
   font-weight: 400;
 }
-
 .topAdCard h3 {
-  font-family: 'Roboto Flex', sans-serif;
+  font-family: "Roboto Flex", sans-serif;
   font-weight: 600;
   margin: 2% 0 0 2%;
 }
-
 .topAdCard h5 {
-  font-family: 'Roboto Flex', sans-serif;
+  font-family: "Roboto Flex", sans-serif;
   font-weight: 600;
   margin: 20% 0 0 2%;
 }
-
 .topAdCard img {
   width: 100%;
   height: 50%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#04091e), to(rgba(4, 9, 30, 0.7)));
-  background-image: linear-gradient(#04091e, rgba(4, 9, 30, 0.7));
+  background-image: linear-gradient(rgb(4, 9, 30), rgba(4, 9, 30, 0.7));
   -o-object-fit: scale-down;
      object-fit: scale-down;
 }
@@ -207,33 +175,21 @@ body {
 
 .sellerContainer {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin-top: 5%;
 }
-
 .sellerContainer h3 {
   font-family: lato;
   color: black;
   font-size: 2.5rem;
   margin: 0;
 }
-
 .sellerContainer p {
   font-size: 1.5rem;
 }
-
 .sellerContainer button {
   width: 150px;
   height: 40px;
@@ -241,19 +197,10 @@ body {
 }
 
 .queryBoxContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   width: 50%;
   text-align: center;
   margin: auto;
@@ -262,20 +209,11 @@ body {
 .queryBox {
   width: 200px;
   height: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin: 1%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 1%; 
 }
 
 .queryBox img {
@@ -287,8 +225,7 @@ body {
   width: 100%;
   text-align: center;
   margin: 1% 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#04091e), to(rgba(4, 9, 30, 0.7)));
-  background-image: linear-gradient(#04091e, rgba(4, 9, 30, 0.7));
+  background-image: linear-gradient(rgb(4, 9, 30), rgba(4, 9, 30, 0.7));
 }
 
 .sliderImage {
@@ -299,108 +236,95 @@ body {
 
 @media (max-width: 700px) {
   .mainTopBar {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 30vh;
     background: aliceblue;
     margin: 0;
   }
+
   .profileActions {
     width: 100%;
     height: 30px;
-    background-color: #74c574;
-    border: none;
-    border-radius: 5px;
-    margin-left: 20px;
-    cursor: pointer;
+    margin: 0;
+    align-self: flex-start;
   }
   .profileActions:hover {
     width: 72px;
     height: 32px;
   }
+
   .location {
-    width: 100%;
+    width: 90%;
     height: 50%;
     margin: 5%;
   }
+
   .location option {
     font-size: 1rem;
     width: 0;
     margin: 0;
     padding: 0;
   }
+
   .searchBar {
-    width: 100%;
+    width: 90%;
     height: 60%;
     margin: 12px 0;
   }
+
   .sellButton {
-    width: 100%;
+    width: 90%;
     height: 50%;
     margin: 12px 0;
   }
+
   .categoriesContainerUl {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     margin: 0;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    justify-content: space-evenly;
     padding: 10px 0;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
+
   .mainContainer {
     width: 100%;
     margin: 0;
   }
+
   .topAdsContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-flow: column-reverse;
-            flex-flow: column-reverse;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-flow: column-reverse;
+    justify-content: center;
+    align-items: center;
     overflow: auto;
   }
+
   .topAdCard {
     width: 80%;
     height: 78%;
   }
+
   .topAdCard img {
     width: 100%;
     height: 80%;
   }
+
   .sliderImage {
-    width: 900px;
-    height: 300px;
+    width: 100%;
+    height: 20vh;
     opacity: 0.5;
   }
+
   .sellerContainer {
     margin-top: 5%;
   }
+
   .sellerContainer h3 {
     font-size: 1.5rem;
     text-align: center;
   }
-}
-/*# sourceMappingURL=mainStyle.module.css.map */
+}/*# sourceMappingURL=mainStyle.module.css.map */

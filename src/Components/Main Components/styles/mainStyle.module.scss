@@ -18,6 +18,7 @@ body {
     h3 {
         display: inline-block;
         margin: 0 0 0 2%;
+        color: rgb(94, 107, 146);
         }
         
     
@@ -38,7 +39,7 @@ body {
 .sellButton {
     @extend .rlsButton;
         width: 10%;
-        height: 70%;
+        height: 50%;
         font-size: 1.2rem;
         font-weight: 100;
     &:hover {
@@ -54,18 +55,17 @@ body {
         padding: 0;
 }
 .profileActions {
-        width: 70px;
-        height: 30px;
-        background-color: rgb(116, 197, 116);
-        border: none;
-        border-radius: 5px;
+        width: 200px;
+        height: 48px;
+       text-align: center;
+        border-radius: 10px;
         margin-left: 20px;
         cursor: pointer;
+        font-size: 1.2rem;
+
 
     &:hover { 
-    width: 72px;
-    height: 32px;
-    
+        font-size: 1.1rem;
 
 }
 
@@ -106,15 +106,15 @@ body {
 
 .topAdsTitle {
     color: black;
-    margin: 0px 20px;
+    margin: 10px 20px;
 }
 
 
 .topAdsContainer {
-    @include flexGeneral(column, wrap, space-around, flex-start);
+    @include flexGeneral(column, wrap, space-between, flex-start);
     width: 100%;
     height: 80vh;
-    padding-top: 10px;
+    padding-top: 0;
     overflow: auto;
 }
 

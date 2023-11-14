@@ -1,42 +1,72 @@
-import React from 'react';
-import styles from "./styles/mainStyle.module.css"
+import React, { useEffect, useState } from "react";
+import styles from "./styles/mainStyle.module.css";
 import { useNavigate } from "react-router-dom";
 
-function TopBar({currentUser}) {
-    
-    const navigate = useNavigate();
-  
-    const handleSell = (e) => {
-        e.preventDefault();
-      navigate("/sell");
+function TopBar({ currentUser }) {
+  const [loginBtn, setLoginBtn] = useState(false);
+
+  useEffect(() => {
+    const getUser = () => {
+      if (currentUser != null) {
+        setLoginBtn(true);
+      }
     };
-    const profileAction = () => {
-      localStorage.setItem("classify-user", undefined)    
-      localStorage.setItem("classify-user-token", undefined)    
-      navigate("/login")
+
+    getUser();
+  }, [currentUser]);
+
+  const navigate = useNavigate();
+
+  const handleSell = (e) => {
+    e.preventDefault();
+    navigate("/sell");
+  };
+  const profileLogIn = () => {
+    navigate("/login");
+  };
+  const profileLogOut = () => {};
+
+  const profileActions = (e) => {
+    console.log(e.target.value);
+    if (e.target.value === "Profile") {
+      navigate("/myProfile");
+    } else if (e.target.value === "Logout") {
+      localStorage.removeItem("classify-user");
+      localStorage.removeItem("classify-user-token");
+      window.location.reload();
     }
+  };
 
   return (
-    <form className={styles.mainTopBar}>
-    <select className={styles.location}>
-      <option>Karachi</option>
-      <option>Hyderabad</option>
-      <option>Lahore</option>
-      <option>Islamabad</option>
-    </select>
+    <div className={styles.mainTopBar}>
+      <select className={styles.location}>
+        <option>Karachi</option>
+        <option>Hyderabad</option>
+        <option>Lahore</option>
+        <option>Islamabad</option>
+      </select>
 
-    <input type="text" className={styles.searchBar} placeholder="Search" />
-    <button onClick={handleSell} className={styles.sellButton}>SELL</button>
-  
-  
-    <div className={styles.profileName}>
+      <input type="text" className={styles.searchBar} placeholder="Search" />
+      <button onClick={handleSell} className={styles.sellButton}>
+        Sell
+      </button>
 
-     {/* <h3>{currentUser.name}</h3>  */}
-      <button className={styles.profileActions} onClick={profileAction}>Log Out</button>
-     
+      <div className={styles.profileName}>
+        {loginBtn && (
+          <select className={styles.profileActions} onChange={profileActions}>
+            <option value="Name">{currentUser.name}</option>
+            <option value="Profile">Profile</option>
+            <option value="Logout">Logout</option>
+          </select>
+        )}
+        {!loginBtn && (
+          <button className={styles.profileActions} onClick={profileLogIn}>
+            Log In
+          </button>
+        )}
+      </div>
     </div>
-    </form>
-  )
+  );
 }
 
-export default TopBar
+export default TopBar;

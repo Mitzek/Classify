@@ -1,7 +1,7 @@
 const Advert = require("../models/adModel")
 
 module.exports.createAd = async (req, res, next) => { 
-    console.log(req.body);
+    
 try {
     const { _id, productTitle,  productDescription, productPrice, sellerContact, name, productCity, imgLink } = req.body;
     const userId = _id;
